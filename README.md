@@ -11,7 +11,7 @@ Si la cantidad de un producto es menor a 1 el mismo desaparece y se borra.<br>
 Todo esto es dinamico ya que los totales se van sumando segun las acciones del usuario.<br>
 Y al final tiene un boton para pagar.<br>
 Si por alguna razon se cierra la pagina, la compra persiste en el carrito hasta que los productos seanquitados del mismo.</p>
-El codigo HTML fue validado en https://validator.w3.org/
-Codigo CSS corregido con https://jigsaw.w3.org/
+El codigo HTML fue validado en https://validator.w3.org/<br>
+Codigo CSS corregido con https://jigsaw.w3.org/<br>
 <pre><code class="has-line-data" data-line-start="19" data-line-end="21" class="language-sh">Pablo Sarasua
 </code></pre>
