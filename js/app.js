@@ -6,6 +6,7 @@ const items = document.getElementById('items')
 const footer = document.getElementById('footer')
 const fragment = document.createDocumentFragment()
 let carrito = {}
+
 $(document).ready(() => {
     fechData()
     if(localStorage.getItem('carrito')) {
