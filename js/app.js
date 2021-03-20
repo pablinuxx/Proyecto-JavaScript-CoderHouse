@@ -7,23 +7,33 @@ const footer = document.getElementById('footer')
 const fragment = document.createDocumentFragment()
 let carrito = {}
 
+
+//Una vez cargada la pagina
 $(document).ready(() => {
+    //Recorro mi archivo .json de productos
     fechData()
+    //Si el localStorage tiene informacion la guardo en mi Carrito
     if(localStorage.getItem('carrito')) {
+        Parseo 
         carrito = JSON.parse(localStorage.getItem('carrito'))               
+        //Llamo a funcion que PintaCarrito
         pintarCarrito()
+        //Funcion que cambia de numero cada vez que se agre/quita productos
         pintarCantidad(carrito) 
     }
 })
-
+//Asigo funcion
 cards.addEventListener('click', e => {
     addCarrto(e)
 })
-
+//Asigo funcion
 items.addEventListener('click', e => {
     btnAccion(e)
 })
+
+//Funcion para leer archivo de productos
 const fechData = async () => {
+    //Try o Catch por si hay errores
     try {
         const res = await fetch('js/productos.json')  
         const data = await res.json()
@@ -34,6 +44,7 @@ const fechData = async () => {
     }
 }
 
+//Dibujo Cards con lo obtenido del Fetch
 const pintarCards = data => {
      data.forEach( producto =>{
          templateCard.querySelector('h5').textContent = producto.title
@@ -47,7 +58,7 @@ const pintarCards = data => {
      cards.appendChild(fragment)
 
 }
-
+//Funcion aagregarCarrito al presionar BtnComprar
 const addCarrto = e =>{
     
     if (e.target.classList.contains('btnComprar')) {        
@@ -55,6 +66,7 @@ const addCarrto = e =>{
     }
     e.stopPropagation()
 }
+//Cargo en el carrito el producto seleccionado y pinto cantidad
 const setCarrito = objeto =>{
     const producto = {
         id: objeto.querySelector('.btnComprar').dataset.id,
@@ -69,9 +81,8 @@ const setCarrito = objeto =>{
     pintarCarrito()
     pintarCantidad(carrito)
 }
-
-const pintarCarrito = ()=> {
-    
+//Pinto carrito en el yemplate HTML 
+const pintarCarrito = ()=> {    
     items.innerHTML= ``
     Object.values(carrito).forEach(producto =>{
         templateCarrito.querySelector('th').textContent = producto.id
@@ -90,6 +101,7 @@ const pintarCarrito = ()=> {
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }
 
+//Funcion que muestra el total y las cantidades
 const pintarFooter = ()=> {
     footer.innerHTML= ``
     if(Object.keys(carrito).length === 0 ) {
@@ -108,6 +120,7 @@ const pintarFooter = ()=> {
     footer.appendChild(fragment)
 
 
+    //Funcion al apretar VaciarCarrito
     btnVaciar = document.getElementById('vaciar-carrito')
    btnVaciar.addEventListener('click', () => {
       
@@ -118,6 +131,7 @@ const pintarFooter = ()=> {
    
 
 }
+//Asigno acciones en cada boton de sumar y restar. Si es 0 lo borro
  const btnAccion = e =>{
      if (e.target.classList.contains('btnSumar')) {      
          const producto = carrito[e.target.dataset.id]
@@ -166,6 +180,7 @@ $("#contador").countdown({
     seconds: "Segundos",
   });
   
+  //Funcion de Ajax para obtener la informacion de la API
 //Ajax
 let xhttp = new XMLHttpRequest();
 xhttp.open(
@@ -180,6 +195,7 @@ xhttp.onreadystatechange = function () {
     pintarTestimonios(datos);
   }
 
+  //Funcion que pinta los testimonios obtenidos de la API
   function pintarTestimonios(datos) {
     const testimonios = document.querySelector("#testimonios");
     for (let item of datos) {
@@ -198,6 +214,7 @@ xhttp.onreadystatechange = function () {
     }
   }
 };
+//Pinto Cantidad en el icono de Cantidad
 function pintarCantidad(carrito){
     circulo = document.getElementById('circulo-cantidad');
    cantidad = Object.keys(carrito).length
