@@ -1,0 +1,92 @@
+[
+    {
+      "id": 1,
+      "title": "almendras" ,
+      "img": "./img/almendra.jpg",
+      "precio": 25
+    },
+    {
+      "id": 2,
+      "title": "ciruela" ,
+      "img": "./img/ciruelas.jpg",
+      "precio": 20
+    },
+    {
+      "id": 3,
+      "title": "frutilla" ,
+      "img": "./img/frutilla.jpg",
+      "precio": 15
+    },
+    {
+      "id": 4,
+      "title": "granada" ,
+      "img": "./img/granada.jpg",
+      "precio": 30
+    },
+    {
+      "id": 5,
+      "title": "mandarina" ,
+      "img": "./img/mandarina.jpg",
+      "precio": 35
+    },
+    {
+      "id": 6,
+      "title": "mangos" ,
+      "img": "./img/mangos.jpg",
+      "precio": 40
+    },
+    {
+      "id": 7,
+      "title": "manzana" ,
+      "img": "./img/manzana.jpg",
+      "precio": 45
+    },
+    {
+      "id": 8,
+      "title": "sandia" ,
+      "img": "./img/sandia.jpg",
+      "precio": 50
+    },
+    {
+      "id": 9,
+      "title": "uvas" ,
+      "img": "./img/uvas.jpg",
+      "precio": 55
+    },
+    {
+      "id": 10,
+      "title": "ajos" ,
+      "img": "./img/ajos.jpg",
+      "precio": 60
+    },
+    {
+      "id": 11,
+      "title": "apio" ,
+      "img": "./img/apio.png",
+      "precio": 65
+    },
+    {
+      "id": 12,
+      "title": "berenjena" ,
+      "img": "./img/berenjena.jpg",
+      "precio": 70
+    },
+    {
+      "id": 13,
+      "title": "cebollas" ,
+      "img": "./img/cebollas.jpg",
+      "precio": 75
+    },
+    {
+      "id": 14,
+      "title": "espinaca" ,
+      "img": "./img/espinaca.jpg",
+      "precio": 80
+    },
+    {
+      "id": 15,
+      "title": "limones" ,
+      "img": "./img/limones.jpg",
+      "precio": 85
+    }
+]

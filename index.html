@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"crossorigin="anonymous"/>
+      <link rel="stylesheet" href="css/estilos.css">
+      <!--Fontawesome-->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>FruitLand</title>
+  </head>
+  <body>
+    <!--LOADER
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>
+    -->
+  <!--END LOADER-->
+    <!--MENU-->
+    <div class="header">
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a class="navbar-brand" href="#">
+          <img src="img/logo.svg" width="125px" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Frutas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Verduras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">MilkShake</a>
+            </li>
+            
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contactanos</a>
+          </li>
+          </ul>  
+          <ul class="list-unstyled">
+            <span id="circulo-cantidad">0</span>
+            <li class="submenu">
+              <a href=""  data-toggle="modal" data-target="#ModalCompra">
+              <img src="img/cart.png" id="img-carrito" />
+            </a>
+            </li>
+          </ul>        
+        </div>
+      </nav>
+    
+      <div class="roww">
+        <div class="col-2">
+          <h1>Directo de la Huerta</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea quaerat
+            soluta officiis quisquam voluptas? Doloremque molestiae
+          </p>          
+          <a class="btnSaber" role="button">
+            Saber Mas &#8594;</a>
+        </div>
+        <div class="col-2">
+          <img src="img/fruits tropical.png" />
+        </div>
+      </div>
+    
+    </div>
+    <!--End Menu-->
+
+    <!--Contador-->
+    
+    <div class="container">
+      <ul id="contador">
+        <li>
+          <span class="days">00</span>
+          <p class="days_text">Days</p>
+        </li>
+        <li class="seperator">:</li>
+        <li>
+          <span class="hours">00</span>
+          <p class="hours_text">Hours</p>
+        </li>
+        <li class="seperator">:</li>
+        <li>
+          <span class="minutes">00</span>
+          <p class="minutes_text">Minutes</p>
+        </li>
+        <li class="seperator">:</li>
+        <li>
+          <span class="seconds">00</span>
+          <p class="seconds_text">Seconds</p>
+        </li>
+      </ul>
+      <div class="row" id="cards"></div>
+    </div>
+  
+    <template id="template-footer">
+        <th scope="row" colspan="2">Total Producto</th>
+        <td>10</td>
+        <td>
+            <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                Vaciar Carrito
+            </button>
+        </td>
+        <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
+    
+    <template id="template-carrito">
+        <tr>
+            <th scope="row">ID</th>
+            <td>Cafe</td>
+            <td>1</td>
+            <td>
+                <button class="btnSumar btn btn-info btn-sm">
+                    +
+                </button>
+                <button class="btnRestar btn btn-danger btn-sm">
+                    -
+                </button>
+            </td>
+            <td>$ <span class="precio">500</span></td>
+        </tr>
+    </template>
+    <template id="template-card">
+      <div class="row ">
+            <div class="card card-1  mb-2 justify-content-center align-content-center">
+                <div class="pr-3 row justify-content-end">
+                  <i class=" m-2 fa fa-heart like"></i>
+                </div>
+                <div class="product-pic mb-4"> <img class="pic1" src="https://i.imgur.com/fP3NOTX.png"> </div> 
+                <h5 class="product-name text-capitalize">TH Jeans City Backpack</h5>
+                <div class="row px-3 justify-content-between">                    
+                    <div class="stars"> <span class="fa fa-star star-active"></span> <span class="fa fa-star star-active"></span> <span class="fa fa-star star-active"></span> <span class="fa fa-star-o"></span> <span class="fa fa-star-o"></span> </div>
+                    <p class="price">$79</p> 
+                </div>
+                <button class=" btnComprar btn btn-success btn-sm">Comprar</button>
+            </div>
+    </div>
+    </template>
+  </section>
+  <div class="container pb-3">
+    <h1 class="text-center py-5">Testimonios</h1>
+    <div class="row" id="testimonios">        
+    </div>
+
+  </div>
+  </section>
+ 
+  <footer class=" pt-2 footer text-center text-white">
+    <!-- Grid container -->
+    <div class="container">
+      <!-- Section: Social media -->
+      <section class="mb-2">
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-facebook-official"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-twitter-square"></i
+        ></a>
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-instagram"></i
+        ></a>
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-snapchat-square"></i
+        ></a>
+  
+        
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center">
+      © 2021 Copyright:
+      <a class="text-white" href="#">
+        <img src="/img/logo.svg" alt="" width="125px">
+      </a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  
+  <!--MODAL-->
+  <div class="modal fade" id="ModalCompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Detalle de Compra</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Accion</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody id="items"></tbody>
+  
+            <tfoot class="table-dark">
+                <tr id="footer">
+                    <th scope="row" colspan="5">Carrito vacio - comience a comprar</th>
+                </tr>
+            </tfoot>
+  
+        </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-success">
+          Pagar &#128176;
+        </button>        
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/query.countdown.js"></script>    
+    <script src="js/app.js"></script>
+  </body>
+</html>
