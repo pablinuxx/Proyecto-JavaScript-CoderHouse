@@ -9,7 +9,8 @@ Alli mismo se indica el producto, la cantidad y el total.<br>
 Se puede ir sumando y restando segun se desee.<br>
 Si la cantidad de un producto es menor a 1 el mismo desaparece y se borra.<br>
 Todo esto es dinamico ya que los totales se van sumando segun las acciones del usuario.<br>
-Y al final tiene un boton para pagar.<br>
+Y al final tiene un boton para pagar.
+  El codigo HTML fue validado en https://validator.w3.org/<br>
 Si por alguna razon se cierra la pagina, la compra persiste en el carrito hasta que los productos seanquitados del mismo.</p>
 <pre><code class="has-line-data" data-line-start="19" data-line-end="21" class="language-sh">Pablo Sarasua
 </code></pre>
