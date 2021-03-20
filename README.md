@@ -12,5 +12,6 @@ Todo esto es dinamico ya que los totales se van sumando segun las acciones del u
 Y al final tiene un boton para pagar.<br>
 Si por alguna razon se cierra la pagina, la compra persiste en el carrito hasta que los productos seanquitados del mismo.</p>
 El codigo HTML fue validado en https://validator.w3.org/
+Codigo CSS corregido con https://jigsaw.w3.org/
 <pre><code class="has-line-data" data-line-start="19" data-line-end="21" class="language-sh">Pablo Sarasua
 </code></pre>
